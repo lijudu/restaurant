@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js', './src/styles.css',
+    entry: './src/index.js',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
@@ -12,7 +12,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(jpe?g|png|gif|svg)$/i, 
-                loader: 'url-loader',
+                loader: 'file-loader',
             },
             {
                 test: /\.css$/i,
