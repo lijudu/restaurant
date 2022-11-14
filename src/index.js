@@ -1,5 +1,25 @@
-import catImg from './assets/zhang-kaiyv-unsplash.jpg'
+import catSource from './assets/zhang-kaiyv-unsplash.jpg'
 import './styles.css'
+
+// function createHome() {
+
+//     const catImg = document.createElement('div');
+//     const createImg = document.createElement('img')
+//     catImg.id = 'catImg'
+//     createImg.id = 'backImg'
+//     createImg.src = catSource
+//     catImg.appendChild(createImg)
+
+//     return catImg
+// }
+
+// function loadHome() {
+//     const index = document.getElementById('index');
+//     index.appendChild(createHome());
+// }
+
+// loadHome()
+
 
 const index = document.getElementById('index')
 const backImg = document.createElement('div')
@@ -30,3 +50,4 @@ image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d4
 bar.appendChild(topHome)
 bar.appendChild(topList)
 bar.appendChild(topContact)
+

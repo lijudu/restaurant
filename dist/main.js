@@ -613,6 +613,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// function createHome() {
+
+//     const catImg = document.createElement('div');
+//     const createImg = document.createElement('img')
+//     catImg.id = 'catImg'
+//     createImg.id = 'backImg'
+//     createImg.src = catSource
+//     catImg.appendChild(createImg)
+
+//     return catImg
+// }
+
+// function loadHome() {
+//     const index = document.getElementById('index');
+//     index.appendChild(createHome());
+// }
+
+// loadHome()
+
+
 const index = document.getElementById('index')
 const backImg = document.createElement('div')
 const cafeTitle = document.createElement('div')
@@ -642,6 +662,7 @@ image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d4
 bar.appendChild(topHome)
 bar.appendChild(topList)
 bar.appendChild(topContact)
+
 
 })();
 
