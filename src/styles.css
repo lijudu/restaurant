@@ -2,6 +2,8 @@
 
 body {
     margin: 0;
+    font-family: 'work sans', sans-serif; 
+    
 }
 
 #catImg {
@@ -22,13 +24,11 @@ body {
     font-size: 4rem;
     color: black; 
     padding-top: 5%;
-    font-family: 'work sans', sans-serif;
     font-style: italic;
     font-weight: 200;
 }
 
 #bar {
-    font-family: 'work sans', sans-serif; 
     list-style: none;
     text-align: center;
     padding-top: 5%;
@@ -36,4 +36,26 @@ body {
     justify-content: center;
     gap: 5%;
     font-size: 1.25rem;
+}
+
+#credit {
+    position: absolute;
+    bottom: 2px;
+    font-size: 12px;
+}
+
+#linky {
+    color: black;
+    text-decoration: none;
+}
+
+#home, #menu, #contact {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-family: 'work sans', sans-serif; 
+}
+
+#home:hover, #menu:hover, #contact:hover {
+    opacity: 0.5;
 }

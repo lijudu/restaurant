@@ -1,53 +1,64 @@
 import catSource from './assets/zhang-kaiyv-unsplash.jpg'
 import './styles.css'
 
-// function createHome() {
-
-//     const catImg = document.createElement('div');
-//     const createImg = document.createElement('img')
-//     catImg.id = 'catImg'
-//     createImg.id = 'backImg'
-//     createImg.src = catSource
-//     catImg.appendChild(createImg)
-
-//     return catImg
-// }
-
-// function loadHome() {
-//     const index = document.getElementById('index');
-//     index.appendChild(createHome());
-// }
-
-// loadHome()
+function createBtn(id, text) {
+    const btn = document.createElement('button');
+    btn.setAttribute('id', id);
+    const span = document.createElement('span');
+    span.innerText = text;
+    btn.appendChild(span);
+   
+    return btn;
+}
 
 
-const index = document.getElementById('index')
-const backImg = document.createElement('div')
-const cafeTitle = document.createElement('div')
-const topMenu = document.createElement('div')
-const topList = document.createElement('LI')
-const topHome = document.createElement('LI')
-const topContact = document.createElement('LI')
+function createBar(id) {
+    const bar = document.createElement('div');
+    bar.setAttribute('id', id);
 
-cafeTitle.id = 'title'
-topMenu.id = 'bar'
-backImg.id = 'catImg'
+    const homeBtn = createBtn('home', 'Home');
+    const menuBtn = createBtn('menu', 'Menu');
+    const contactBtn = createBtn('contact', 'Contact');
 
-cafeTitle.innerText = 'Cat Cat Catfe'
-topList.innerText = 'Menu'
-topHome.innerText = 'Home'
-topContact.innerText ='Contact'
+    bar.appendChild(homeBtn)
+    bar.appendChild(menuBtn)
+    bar.appendChild(contactBtn)
 
-index.appendChild(backImg)
-index.appendChild(topMenu)
-index.appendChild(cafeTitle)
+    return bar;
+}
 
-const bar = document.getElementById('bar')
-const image = document.getElementById('catImg')
 
-image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
+function createHome() {
 
-bar.appendChild(topHome)
-bar.appendChild(topList)
-bar.appendChild(topContact)
+    const index = document.getElementById('index')
+    const backImg = document.createElement('div')
+    const cafeTitle = document.createElement('div')
+
+    const bar = createBar('bar');
+    
+    cafeTitle.id = 'title'
+    backImg.id = 'catImg'
+    
+    cafeTitle.innerText = 'Cat Cat Catfe'
+
+    index.appendChild(backImg)
+    index.appendChild(bar) 
+    index.appendChild(cafeTitle)
+
+    const image = document.getElementById('catImg')
+    
+    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
+    
+    return 
+}
+
+function loadHome() {
+    const index = document.getElementById('index');
+
+    index.appendChild(createHome());
+}
+
+loadHome()
+
+
 
