@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;1,100;1,200;1,300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'work sans', sans-serif; \n    \n}\n\n#catImg {\n    margin: 0;\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    opacity: 0.7;\n    position: absolute;\n    z-index: -1;\n}\n\n\n#title {\n    text-align: center;\n    font-size: 4rem;\n    color: black; \n    padding-top: 5%;\n    font-style: italic;\n    font-weight: 200;\n}\n\n#bar {\n    list-style: none;\n    text-align: center;\n    padding-top: 5%;\n    display: flex;\n    justify-content: center;\n    gap: 5%;\n    font-size: 1.25rem;\n}\n\n#credit {\n    position: absolute;\n    bottom: 2px;\n    font-size: 12px;\n}\n\n#linky {\n    color: black;\n    text-decoration: none;\n}\n\n#home, #menu, #contact {\n    border: none;\n    background: transparent;\n    font-size: 20px;\n    font-family: 'work sans', sans-serif; \n}\n\n#home:hover, #menu:hover, #contact:hover {\n    opacity: 0.5;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'work sans', sans-serif; \n    \n}\n\n#catImg {\n    margin: 0;\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    opacity: 0.7;\n    position: absolute;\n    z-index: -1;\n}\n\n\n#title {\n    text-align: center;\n    font-size: 4rem;\n    color: black; \n    padding-top: 5%;\n    font-style: italic;\n    font-weight: 200;\n}\n\n#bar {\n    list-style: none;\n    text-align: center;\n    padding-top: 5%;\n    display: flex;\n    justify-content: center;\n    gap: 5%;\n    font-size: 1.25rem;\n}\n\n#credit {\n    position: absolute;\n    bottom: 2px;\n    font-size: 12px;\n    right: 3px;\n}\n\n#linky {\n    color: black;\n    text-decoration: none;\n}\n\n#home, #menu, #contact {\n    border: none;\n    background: transparent;\n    font-size: 20px;\n    font-family: 'work sans', sans-serif; \n}\n\n#home:hover, #menu:hover, #contact:hover {\n    opacity: 0.5;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -613,6 +613,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const index = document.getElementById('index');
+
 function createBtn(id, text) {
     const btn = document.createElement('button');
     btn.setAttribute('id', id);
@@ -639,23 +641,25 @@ function createBar(id) {
     return bar;
 }
 
+function createTitle(id, text) {
+    const cafeTitle = document.createElement('div')
+    cafeTitle.setAttribute('id', id)
+    cafeTitle.innerText = text
+
+    return cafeTitle
+}
 
 function createHome() {
-
-    const index = document.getElementById('index')
-    const backImg = document.createElement('div')
-    const cafeTitle = document.createElement('div')
+    const backImg = document.createElement('div');
 
     const bar = createBar('bar');
+    const mainTitle = createTitle('title', 'Cat Cat Catfe')
     
-    cafeTitle.id = 'title'
-    backImg.id = 'catImg'
-    
-    cafeTitle.innerText = 'Cat Cat Catfe'
+    backImg.id = 'catImg';
 
     index.appendChild(backImg)
     index.appendChild(bar) 
-    index.appendChild(cafeTitle)
+    index.appendChild(mainTitle)
 
     const image = document.getElementById('catImg')
     
@@ -665,8 +669,6 @@ function createHome() {
 }
 
 function loadHome() {
-    const index = document.getElementById('index');
-
     index.appendChild(createHome());
 }
 
