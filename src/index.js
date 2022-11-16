@@ -1,6 +1,8 @@
 import catSource from './assets/zhang-kaiyv-unsplash.jpg'
 import './styles.css'
 
+const index = document.getElementById('index');
+
 function createBtn(id, text) {
     const btn = document.createElement('button');
     btn.setAttribute('id', id);
@@ -27,23 +29,25 @@ function createBar(id) {
     return bar;
 }
 
+function createTitle(id, text) {
+    const cafeTitle = document.createElement('div')
+    cafeTitle.setAttribute('id', id)
+    cafeTitle.innerText = text
+
+    return cafeTitle
+}
 
 function createHome() {
-
-    const index = document.getElementById('index')
-    const backImg = document.createElement('div')
-    const cafeTitle = document.createElement('div')
+    const backImg = document.createElement('div');
 
     const bar = createBar('bar');
+    const mainTitle = createTitle('title', 'Cat Cat Catfe')
     
-    cafeTitle.id = 'title'
-    backImg.id = 'catImg'
-    
-    cafeTitle.innerText = 'Cat Cat Catfe'
+    backImg.id = 'catImg';
 
     index.appendChild(backImg)
     index.appendChild(bar) 
-    index.appendChild(cafeTitle)
+    index.appendChild(mainTitle)
 
     const image = document.getElementById('catImg')
     
@@ -53,8 +57,6 @@ function createHome() {
 }
 
 function loadHome() {
-    const index = document.getElementById('index');
-
     index.appendChild(createHome());
 }
 
