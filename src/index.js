@@ -53,14 +53,9 @@ function createHome() {
     
     image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
     
-    return 
 }
 
-function loadHome() {
-    index.appendChild(createHome());
-}
 
-loadHome()
-
+createHome()
 
 
