@@ -37,17 +37,30 @@ function createTitle(id, text) {
     return cafeTitle
 }
 
+function createBlurb(id) {
+    const mainText = document.createElement('div')
+    mainText.setAttribute('id', id)
+    const mainBlurb = document.createElement('p')
+    
+    mainText.appendChild(mainBlurb)
+    mainBlurb.innerText = "DroLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem."
+
+    return mainText
+}
+
 function createHome() {
     const backImg = document.createElement('div');
 
     const bar = createBar('bar');
-    const mainTitle = createTitle('title', 'Cat Cat Catfe')
+    const mainTitle = createTitle('title', 'Cat Cat Catfe');
+    const mainBlurb = createBlurb('blurb')
     
     backImg.id = 'catImg';
 
     index.appendChild(backImg)
     index.appendChild(bar) 
     index.appendChild(mainTitle)
+    index.appendChild(mainBlurb)
 
     const image = document.getElementById('catImg')
     

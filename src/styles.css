@@ -60,3 +60,9 @@ body {
 #home:hover, #menu:hover, #contact:hover {
     opacity: 0.5;
 }
+
+#blurb {
+    text-align: center;
+    font-size: 20px;
+    margin: 50px 10%;
+}
