@@ -1,5 +1,8 @@
-import catSource from './assets/zhang-kaiyv-unsplash.jpg'
 import './styles.css'
+import testMenu from '/Users/Lisa/Desktop/repos/restaurant/src/menu.js'
+import testContact from '/Users/Lisa/Desktop/repos/restaurant/src/contact.js'
+import testHome from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
+
 
 const index = document.getElementById('index');
 
@@ -21,6 +24,12 @@ function createBar(id) {
     const homeBtn = createBtn('home', 'Home');
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
+
+    homeBtn.addEventListener('click', function(){
+        console.log('returnHome!')
+    })
+    menuBtn.addEventListener('click', testMenu)
+    contactBtn.addEventListener('click', testContact)
 
     bar.appendChild(homeBtn)
     bar.appendChild(menuBtn)
@@ -70,5 +79,5 @@ function createHome() {
 
 
 createHome()
-
+testHome()
 
