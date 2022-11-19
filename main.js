@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;1,100;1,200;1,300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'work sans', sans-serif; \n    \n}\n\n#catImg {\n    margin: 0;\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    opacity: 0.7;\n    position: absolute;\n    z-index: -1;\n}\n\n\n#title {\n    text-align: center;\n    font-size: 4rem;\n    color: black; \n    padding-top: 5%;\n    font-style: italic;\n    font-weight: 200;\n}\n\n#bar {\n    list-style: none;\n    text-align: center;\n    padding-top: 5%;\n    display: flex;\n    justify-content: center;\n    gap: 5%;\n    font-size: 1.25rem;\n}\n\n#credit {\n    position: absolute;\n    bottom: 2px;\n    font-size: 12px;\n    right: 3px;\n}\n\n#linky {\n    color: black;\n    text-decoration: none;\n}\n\n#home, #menu, #contact {\n    border: none;\n    background: transparent;\n    font-size: 20px;\n    font-family: 'work sans', sans-serif; \n}\n\n#home:hover, #menu:hover, #contact:hover {\n    opacity: 0.5;\n}\n\n#blurb {\n    text-align: center;\n    font-size: 20px;\n    margin: 50px 10%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'work sans', sans-serif; \n    \n}\n\n#catImg {\n    margin: 0;\n    height: 100vh;\n    width: 100%;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center;\n    opacity: 0.7;\n    position: absolute;\n    z-index: -1;\n}\n\n\n#title {\n    text-align: center;\n    font-size: 4rem;\n    color: black; \n    padding-top: 5%;\n    font-style: italic;\n    font-weight: 200;\n}\n\n#bar {\n    list-style: none;\n    text-align: center;\n    padding-top: 5%;\n    display: flex;\n    justify-content: center;\n    gap: 5%;\n    font-size: 1.25rem;\n}\n\n#credit {\n    position: absolute;\n    bottom: 2px;\n    font-size: 12px;\n    right: 3px;\n}\n\n#linky {\n    color: black;\n    text-decoration: none;\n}\n\n#home, #menu, #contact {\n    border: none;\n    background: transparent;\n    font-size: 20px;\n    font-family: 'work sans', sans-serif; \n}\n\n#home:hover, #menu:hover, #contact:hover {\n    opacity: 0.5;\n}\n\n#blurb {\n    text-align: center;\n    font-size: 20px;\n    margin: 50px 10%;\n}\n\n#loadMenu, #loadContacts {\n    text-align: center;\n    padding-top: 10%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -525,7 +525,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function testContact() {
-    console.log('contactClicked!')
+    const newContact = document.createElement('div')
+    newContact.id = 'loadContacts'
+    newContact.innerText = 'CONTACTSSS'
+
+    index.appendChild(newContact)
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (testContact);
@@ -540,13 +544,41 @@ function testContact() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "createBlurb": () => (/* binding */ createBlurb),
+/* harmony export */   "createTitle": () => (/* binding */ createTitle),
+/* harmony export */   "fullTitle": () => (/* binding */ fullTitle)
 /* harmony export */ });
-function testHome() {
-    console.log('home!')
+function createTitle(id, text) {
+    const cafeTitle = document.createElement('div')
+    cafeTitle.setAttribute('id', id)
+    cafeTitle.innerText = text
+
+    return cafeTitle
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (testHome);
+function createBlurb(id) {
+    const mainText = document.createElement('div')
+    mainText.setAttribute('id', id)
+    const mainBlurb = document.createElement('p')
+    
+    mainText.appendChild(mainBlurb)
+    mainBlurb.innerText = "DroLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem."
+
+    return mainText
+}
+
+function fullTitle() {
+    // const index = document.getElementById('index')
+    // index.innerText = ""
+    const mainTitle = createTitle('title', 'Cat Cat Catfe');
+    const mainBlurb = createBlurb('blurb')
+
+    index.appendChild(mainTitle)
+    index.appendChild(mainBlurb)
+}
+
+
+
 
 /***/ }),
 
@@ -561,7 +593,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function testMenu(){
-    console.log('menuClicked!')
+    const newMenu = document.createElement('div')
+    newMenu.id = 'loadMenu'
+    newMenu.innerText = 'DA MENUUU'
+
+    index.appendChild(newMenu)
+    
+ 
+
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (testMenu);
@@ -679,63 +718,73 @@ function createBar(id) {
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
 
-    homeBtn.addEventListener('click', function(){
-        console.log('returnHome!')
-    })
-    menuBtn.addEventListener('click', _Users_Lisa_Desktop_repos_restaurant_src_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"])
-    contactBtn.addEventListener('click', _Users_Lisa_Desktop_repos_restaurant_src_contact_js__WEBPACK_IMPORTED_MODULE_2__["default"])
+    // homeBtn.addEventListener('click', function() {
+    //     fullTitle
+    // })
+    // menuBtn.addEventListener('click', testMenu)
+    // contactBtn.addEventListener('click', testContact)
 
     bar.appendChild(homeBtn)
     bar.appendChild(menuBtn)
     bar.appendChild(contactBtn)
 
-    return bar;
-}
-
-function createTitle(id, text) {
-    const cafeTitle = document.createElement('div')
-    cafeTitle.setAttribute('id', id)
-    cafeTitle.innerText = text
-
-    return cafeTitle
-}
-
-function createBlurb(id) {
-    const mainText = document.createElement('div')
-    mainText.setAttribute('id', id)
-    const mainBlurb = document.createElement('p')
+    homeBtn.addEventListener('click', function(){
+        index.innerHTML = ""
+        createHome()
+        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
+    })
     
-    mainText.appendChild(mainBlurb)
-    mainBlurb.innerText = "DroLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem."
+    menuBtn.addEventListener('click', function() {
+        index.innerHTML = ""
+        createHome()
+        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
+    })
 
-    return mainText
+    contactBtn.addEventListener('click', function(){
+        index.innerHTML = ""
+        createHome()
+        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_contact_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
+    })
+
+    return bar;
 }
 
 function createHome() {
     const backImg = document.createElement('div');
+    backImg.id = 'catImg';
+    index.appendChild(backImg)
+    const image = document.getElementById('catImg')
+    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
 
     const bar = createBar('bar');
-    const mainTitle = createTitle('title', 'Cat Cat Catfe');
-    const mainBlurb = createBlurb('blurb')
-    
-    backImg.id = 'catImg';
 
-    index.appendChild(backImg)
-    index.appendChild(bar) 
-    index.appendChild(mainTitle)
-    index.appendChild(mainBlurb)
+    index.appendChild(bar)
 
-    const image = document.getElementById('catImg')
-    
-    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
-    
 }
 
 
 createHome()
-;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
 
+const returnHome = document.getElementById('home')
+const showMenu = document.getElementById('menu')
 
+// returnHome.addEventListener('click', function(){
+//     index.innerHTML = ""
+//     createHome()
+//     fullTitle()
+// })
+
+// showMenu.addEventListener('click', function() {
+//     index.innerHTML = ""
+//     createHome()
+//     testMenu()
+// })
+
+// contactBtn.addEventListener('click', function(){
+//     index.innerHTML = ""
+//     createHome()
+//     testContact()
+// })
 })();
 
 /******/ })()
