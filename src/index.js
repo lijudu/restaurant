@@ -1,7 +1,7 @@
 import './styles.css'
 import testMenu from '/Users/Lisa/Desktop/repos/restaurant/src/menu.js'
 import testContact from '/Users/Lisa/Desktop/repos/restaurant/src/contact.js'
-import testHome from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
+import { createTitle, createBlurb, fullTitle } from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
 
 
 const index = document.getElementById('index');
@@ -25,59 +25,70 @@ function createBar(id) {
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
 
-    homeBtn.addEventListener('click', function(){
-        console.log('returnHome!')
-    })
-    menuBtn.addEventListener('click', testMenu)
-    contactBtn.addEventListener('click', testContact)
+    // homeBtn.addEventListener('click', function() {
+    //     fullTitle
+    // })
+    // menuBtn.addEventListener('click', testMenu)
+    // contactBtn.addEventListener('click', testContact)
 
     bar.appendChild(homeBtn)
     bar.appendChild(menuBtn)
     bar.appendChild(contactBtn)
 
-    return bar;
-}
-
-function createTitle(id, text) {
-    const cafeTitle = document.createElement('div')
-    cafeTitle.setAttribute('id', id)
-    cafeTitle.innerText = text
-
-    return cafeTitle
-}
-
-function createBlurb(id) {
-    const mainText = document.createElement('div')
-    mainText.setAttribute('id', id)
-    const mainBlurb = document.createElement('p')
+    homeBtn.addEventListener('click', function(){
+        index.innerHTML = ""
+        createHome()
+        fullTitle()
+    })
     
-    mainText.appendChild(mainBlurb)
-    mainBlurb.innerText = "DroLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa ultricies mi quis hendrerit dolor magna eget est lorem."
+    menuBtn.addEventListener('click', function() {
+        index.innerHTML = ""
+        createHome()
+        testMenu()
+    })
 
-    return mainText
+    contactBtn.addEventListener('click', function(){
+        index.innerHTML = ""
+        createHome()
+        testContact()
+    })
+
+    return bar;
 }
 
 function createHome() {
     const backImg = document.createElement('div');
+    backImg.id = 'catImg';
+    index.appendChild(backImg)
+    const image = document.getElementById('catImg')
+    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
 
     const bar = createBar('bar');
-    const mainTitle = createTitle('title', 'Cat Cat Catfe');
-    const mainBlurb = createBlurb('blurb')
-    
-    backImg.id = 'catImg';
 
-    index.appendChild(backImg)
-    index.appendChild(bar) 
-    index.appendChild(mainTitle)
-    index.appendChild(mainBlurb)
+    index.appendChild(bar)
 
-    const image = document.getElementById('catImg')
-    
-    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
-    
 }
 
 
 createHome()
-testHome()
 
+const returnHome = document.getElementById('home')
+const showMenu = document.getElementById('menu')
+
+// returnHome.addEventListener('click', function(){
+//     index.innerHTML = ""
+//     createHome()
+//     fullTitle()
+// })
+
+// showMenu.addEventListener('click', function() {
+//     index.innerHTML = ""
+//     createHome()
+//     testMenu()
+// })
+
+// contactBtn.addEventListener('click', function(){
+//     index.innerHTML = ""
+//     createHome()
+//     testContact()
+// })
