@@ -764,6 +764,7 @@ function createHome() {
 
 
 createHome()
+;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
 
 const returnHome = document.getElementById('home')
 const showMenu = document.getElementById('menu')
