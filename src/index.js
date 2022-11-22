@@ -1,7 +1,7 @@
 import './styles.css'
 import testMenu from '/Users/Lisa/Desktop/repos/restaurant/src/menu.js'
 import testContact from '/Users/Lisa/Desktop/repos/restaurant/src/contact.js'
-import { createTitle, createBlurb, fullTitle } from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
+import { fullTitle }  from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
 
 
 const index = document.getElementById('index');
@@ -16,7 +16,6 @@ function createBtn(id, text) {
     return btn;
 }
 
-
 function createBar(id) {
     const bar = document.createElement('div');
     bar.setAttribute('id', id);
@@ -24,12 +23,6 @@ function createBar(id) {
     const homeBtn = createBtn('home', 'Home');
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
-
-    // homeBtn.addEventListener('click', function() {
-    //     fullTitle
-    // })
-    // menuBtn.addEventListener('click', testMenu)
-    // contactBtn.addEventListener('click', testContact)
 
     bar.appendChild(homeBtn)
     bar.appendChild(menuBtn)
@@ -72,24 +65,3 @@ function createHome() {
 
 createHome()
 fullTitle()
-
-const returnHome = document.getElementById('home')
-const showMenu = document.getElementById('menu')
-
-// returnHome.addEventListener('click', function(){
-//     index.innerHTML = ""
-//     createHome()
-//     fullTitle()
-// })
-
-// showMenu.addEventListener('click', function() {
-//     index.innerHTML = ""
-//     createHome()
-//     testMenu()
-// })
-
-// contactBtn.addEventListener('click', function(){
-//     index.innerHTML = ""
-//     createHome()
-//     testContact()
-// })

@@ -544,8 +544,6 @@ function testContact() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createBlurb": () => (/* binding */ createBlurb),
-/* harmony export */   "createTitle": () => (/* binding */ createTitle),
 /* harmony export */   "fullTitle": () => (/* binding */ fullTitle)
 /* harmony export */ });
 function createTitle(id, text) {
@@ -568,15 +566,12 @@ function createBlurb(id) {
 }
 
 function fullTitle() {
-    // const index = document.getElementById('index')
-    // index.innerText = ""
     const mainTitle = createTitle('title', 'Cat Cat Catfe');
     const mainBlurb = createBlurb('blurb')
 
     index.appendChild(mainTitle)
     index.appendChild(mainBlurb)
 }
-
 
 
 
@@ -599,8 +594,6 @@ function testMenu(){
 
     index.appendChild(newMenu)
     
- 
-
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (testMenu);
@@ -709,7 +702,6 @@ function createBtn(id, text) {
     return btn;
 }
 
-
 function createBar(id) {
     const bar = document.createElement('div');
     bar.setAttribute('id', id);
@@ -717,12 +709,6 @@ function createBar(id) {
     const homeBtn = createBtn('home', 'Home');
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
-
-    // homeBtn.addEventListener('click', function() {
-    //     fullTitle
-    // })
-    // menuBtn.addEventListener('click', testMenu)
-    // contactBtn.addEventListener('click', testContact)
 
     bar.appendChild(homeBtn)
     bar.appendChild(menuBtn)
@@ -765,27 +751,6 @@ function createHome() {
 
 createHome()
 ;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
-
-const returnHome = document.getElementById('home')
-const showMenu = document.getElementById('menu')
-
-// returnHome.addEventListener('click', function(){
-//     index.innerHTML = ""
-//     createHome()
-//     fullTitle()
-// })
-
-// showMenu.addEventListener('click', function() {
-//     index.innerHTML = ""
-//     createHome()
-//     testMenu()
-// })
-
-// contactBtn.addEventListener('click', function(){
-//     index.innerHTML = ""
-//     createHome()
-//     testContact()
-// })
 })();
 
 /******/ })()

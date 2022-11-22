@@ -18,8 +18,6 @@ function createBlurb(id) {
 }
 
 function fullTitle() {
-    // const index = document.getElementById('index')
-    // index.innerText = ""
     const mainTitle = createTitle('title', 'Cat Cat Catfe');
     const mainBlurb = createBlurb('blurb')
 
@@ -27,5 +25,4 @@ function fullTitle() {
     index.appendChild(mainBlurb)
 }
 
-
-export { createTitle, createBlurb, fullTitle }
+export { fullTitle }

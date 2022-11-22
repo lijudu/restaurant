@@ -5,8 +5,6 @@ function testMenu(){
 
     index.appendChild(newMenu)
     
- 
-
 }
 
 export default testMenu
