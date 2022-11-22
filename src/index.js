@@ -71,6 +71,7 @@ function createHome() {
 
 
 createHome()
+fullTitle()
 
 const returnHome = document.getElementById('home')
 const showMenu = document.getElementById('menu')
