@@ -681,9 +681,9 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
-/* harmony import */ var _Users_Lisa_Desktop_repos_restaurant_src_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/menu.js */ "./src/menu.js");
-/* harmony import */ var _Users_Lisa_Desktop_repos_restaurant_src_contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/contact.js */ "./src/contact.js");
-/* harmony import */ var _Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/home.js */ "./src/home.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ "./src/contact.js");
+/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
 
 
 
@@ -717,19 +717,19 @@ function createBar(id) {
     homeBtn.addEventListener('click', function(){
         index.innerHTML = ""
         createHome()
-        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
+        ;(0,_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
     })
     
     menuBtn.addEventListener('click', function() {
         index.innerHTML = ""
         createHome()
-        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
+        ;(0,_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
     })
 
     contactBtn.addEventListener('click', function(){
         index.innerHTML = ""
         createHome()
-        ;(0,_Users_Lisa_Desktop_repos_restaurant_src_contact_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
+        ;(0,_contact_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
     })
 
     return bar;
@@ -750,7 +750,7 @@ function createHome() {
 
 
 createHome()
-;(0,_Users_Lisa_Desktop_repos_restaurant_src_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
+;(0,_home_js__WEBPACK_IMPORTED_MODULE_3__.fullTitle)()
 })();
 
 /******/ })()
