@@ -1,7 +1,7 @@
 import './styles.css'
-import testMenu from '/Users/Lisa/Desktop/repos/restaurant/src/menu.js'
-import testContact from '/Users/Lisa/Desktop/repos/restaurant/src/contact.js'
-import { fullTitle }  from '/Users/Lisa/Desktop/repos/restaurant/src/home.js'
+import testMenu from './menu.js'
+import testContact from './contact.js'
+import { fullTitle }  from './home.js'
 
 
 const index = document.getElementById('index');
