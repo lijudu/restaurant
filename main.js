@@ -740,7 +740,7 @@ function createHome() {
     backImg.id = 'catImg';
     index.appendChild(backImg)
     const image = document.getElementById('catImg')
-    image.style.backgroundImage = "url('/Users/Lisa/Desktop/repos/restaurant/dist/d47c346547c960bf39cab6e6088d2755.jpg')"
+    image.style.backgroundImage = "url('./d47c346547c960bf39cab6e6088d2755.jpg')"
 
     const bar = createBar('bar');
 
