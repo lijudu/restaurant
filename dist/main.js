@@ -710,7 +710,7 @@ function createBar(id) {
     const menuBtn = createBtn('menu', 'Menu');
     const contactBtn = createBtn('contact', 'Contact');
 
-    bar.appendChild(homeBtn)
+    bar.appendChild(homeBtn)    
     bar.appendChild(menuBtn)
     bar.appendChild(contactBtn)
 
